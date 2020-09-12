@@ -1,0 +1,25 @@
+{
+  "name": "webpack5-ts-react",
+  "version": "1.0.0",
+  "description": "use webpack5 for react and typescript",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "prod": "webpack"
+  },
+  "keywords": [
+    "webpack5",
+    "ts",
+    "typescript",
+    "react"
+  ],
+  "author": "what4up",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

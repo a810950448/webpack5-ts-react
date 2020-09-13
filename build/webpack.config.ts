@@ -7,13 +7,11 @@ const config = {
   entry: path.join("../src/index.tsx"), // 入口文件
   module: {
     rules: [
-      // 使用 babel-loader 解析 ts, js, tsx, jsx 文件.
       {
         test: /\.(ts|js)x?$/,
         use: "babel-loader",
         exclude: /node_modules/,
       },
-      // 执行顺序：从右到左
       {
         test: /\.(le|c)ss$/i,
         use: [
@@ -28,7 +26,6 @@ const config = {
           "less-loader",
         ],
       },
-      // 使用 url-loader 将小于 4KB 图片 转换为 base64 URIs
       {
         test: /\.(png|jpe?g|gif|webp)$/i,
         use: [
@@ -64,12 +61,4 @@ const config = {
   // ],
 };
 
-module.exports = (env, argv) => {
-  if (argv.mode === "development") {
-    config.devtool = "source-map"; // 导出SourceMap供调试
-  }
-
-  if (argv.mode === "production") {
-  }
-  return config;
-};
+module.exports = config;

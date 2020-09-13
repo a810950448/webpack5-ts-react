@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "use webpack5 for react and typescript",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.config.ts --mode=development ",
-    "build": "webpack --build --config build/webpack.config.prod.ts"
+    "dev": "node -r @babel/register ./babelregister.js && webpack-dev-server --config build/webpack.config.dev.ts",
+    "build": "node -r @babel/register ./babelregister.js && webpack --build --config build/webpack.config.prod.ts"
   },
   "keywords": [
     "webpack5",
@@ -20,8 +20,11 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@babel/register": "^7.11.5",
+    "@types/mini-css-extract-plugin": "^0.9.1",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "@types/webpack": "^4.41.22",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",

@@ -1,9 +1,8 @@
-const path = require("path");
+import webpack from "webpack";
+import path from "path";
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const config = {
+const config: webpack.Configuration = {
   entry: path.join("../src/index.tsx"), // 入口文件
   module: {
     rules: [
@@ -61,4 +60,4 @@ const config = {
   // ],
 };
 
-module.exports = config;
+export { config };
